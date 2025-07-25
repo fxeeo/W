@@ -1,4 +1,16 @@
 #!/usr/bin/env python3
+import subprocess
+import sys
+
+required = [
+    "telebot", "requests", "bs4", "flask", "instaloader"
+]
+
+for pkg in required:
+    try:
+        __import__(pkg if pkg != "bs4" else "bs4.BeautifulSoup")
+    except ImportError:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
 import base64
 import sys
 import binascii
