@@ -23,7 +23,8 @@ import sys
 required_modules = [
     'os', 'subprocess', 'zipfile', 'json', 'uuid', 'sys', 'time', 'threading',
     'signal', 'psutil', 'asyncio', 're', 'datetime', 'queue', 'select',
-    'telegram', 'telegram.ext', 'requests', 'urllib3'
+    'python-telegram-bot', 'requests', 'urllib3'
+]
 ]
 
 def install_missing_modules():
