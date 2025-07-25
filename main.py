@@ -25,7 +25,6 @@ required_modules = [
     'signal', 'psutil', 'asyncio', 're', 'datetime', 'queue', 'select',
     'python-telegram-bot', 'requests', 'urllib3'
 ]
-]
 
 def install_missing_modules():
     for module in required_modules:
