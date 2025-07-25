@@ -1,3 +1,25 @@
+# Auto Module Installer
+import subprocess
+import sys
+
+required = [
+    'os',
+    'sys',
+    'subprocess',
+    'requests',
+    'pyTelegramBotAPI',
+    'datetime',
+    'time'
+]
+
+for pkg in required:
+    try:
+        if pkg == 'pyTelegramBotAPI':
+            __import__('telebot')
+        else:
+            __import__(pkg)
+    except ImportError:
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', pkg])
 BOT_TOKEN = "7353573625:AAFBKM_aQvcAUhL6NpKAf9tBQKqZR1Acu2k"
 import os
 import sys
